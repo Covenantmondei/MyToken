@@ -106,7 +106,7 @@ contract Token is IERC20 {
         emit Approval(msg.sender, _spender, allowance[msg.sender][_spender]);
         return true;
     }
-function mint(address _to, uint256 _amount) public onlyOwner returns (bool success) {
+    function mint(address _to, uint256 _amount) public onlyOwner returns (bool success) {
         require(_to != address(0), "Mint to zero address is not allowed");
         
         totalSupply += _amount;
